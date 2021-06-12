@@ -19,7 +19,7 @@ dependencies {
     testImplementation 'org.seleniumhq.selenium:selenium-java:4.0.0-beta-3'
 
     // WebDriverManager
-    testImplementation 'io.github.bonigarcia:webdrivermanager:4.4.1'
+    testImplementation 'io.github.bonigarcia:webdrivermanager:4.4.3'
 
     // Use JUnit Jupiter API for testing.
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.1'
