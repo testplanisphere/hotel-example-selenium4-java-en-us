@@ -11,13 +11,8 @@ on:
 jobs:
   test:
 
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     
-    strategy:
-      matrix:
-        os: [ubuntu-latest, macos-latest]
-      fail-fast: false
-
     steps:
     - uses: actions/checkout@v2
     - name: Set up JDK 11
