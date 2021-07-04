@@ -32,4 +32,4 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Lint and Test with Gradle
-      run: ./gradlew clean check
+      run: ./gradlew --no-daemon clean check
