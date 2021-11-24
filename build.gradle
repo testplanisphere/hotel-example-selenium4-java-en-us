@@ -16,7 +16,7 @@ repositories {
 
 dependencies {
     // Selenium-java 4
-    testImplementation 'org.seleniumhq.selenium:selenium-java:4.0.0'
+    testImplementation 'org.seleniumhq.selenium:selenium-java:4.1.0'
 
     // WebDriverManager
     testImplementation 'io.github.bonigarcia:webdrivermanager:5.0.3'
