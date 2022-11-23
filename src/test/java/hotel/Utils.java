@@ -1,6 +1,5 @@
 package hotel;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import java.util.ArrayList;
 import java.util.Collection;
 import org.openqa.selenium.Dimension;
@@ -17,7 +16,6 @@ public class Utils {
   }
 
   public static WebDriver createWebDriver() {
-    WebDriverManager.chromedriver().setup();
     var githubActions = Boolean.parseBoolean(System.getenv("GITHUB_ACTIONS"));
     var options = new ChromeOptions();
     if (githubActions) {
