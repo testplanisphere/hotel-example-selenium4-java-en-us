@@ -32,6 +32,9 @@ https://hotel.testplanisphere.dev/en-US/
 
 * JDK 11
 * Google Chrome
+* [ChromeDriver](https://chromedriver.chromium.org/downloads)
+
+Download Chromedriver and place it in the System PATH.
 
 #### Run Tests
 
