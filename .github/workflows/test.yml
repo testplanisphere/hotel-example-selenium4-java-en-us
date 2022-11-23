@@ -6,7 +6,7 @@ on:
       - main
   pull_request:
   schedule:
-    - cron: '30 4 * * *'
+    - cron: '30 3 * * *'
 
 jobs:
   test:
@@ -20,8 +20,7 @@ jobs:
       with:
         distribution: 'temurin'
         java-version: 17
-        cache: 'gradle'
-    - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
-    - name: Lint and Test with Gradle
-      run: ./gradlew --no-daemon clean check
+    - name: Setup and execute Gradle 'test' task
+      uses: gradle/gradle-build-action@v2
+      with:
+        arguments: test
