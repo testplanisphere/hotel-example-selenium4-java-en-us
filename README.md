@@ -26,10 +26,6 @@ https://hotel.testplanisphere.dev/en-US/
 
 * [Gradle](https://gradle.org/)
 
-#### Lint Tool
-
-* [Checkstyle](https://checkstyle.sourceforge.io/)
-
 ### How to Run
 
 #### Requirements
@@ -37,18 +33,18 @@ https://hotel.testplanisphere.dev/en-US/
 * JDK 11
 * Google Chrome
 
-#### Run Tests and lint
+#### Run Tests
 
 ##### Windows
 
 ```
-gradlew.bat clean check
+gradlew.bat clean test
 ```
 
 ##### macOS/Linux
 
 ```
-./gradlew clean check
+./gradlew clean test
 ```
 
 ### Changelog
