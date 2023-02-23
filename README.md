@@ -30,7 +30,7 @@ https://hotel.testplanisphere.dev/en-US/
 
 #### Requirements
 
-* JDK 11
+* JDK 17
 * Google Chrome
 * [ChromeDriver](https://chromedriver.chromium.org/downloads)
 
