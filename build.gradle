@@ -17,6 +17,9 @@ dependencies {
     // Selenium-java 4
     testImplementation 'org.seleniumhq.selenium:selenium-java:4.8.1'
 
+    // Selenium-java 4 jdk client
+    testImplementation 'org.seleniumhq.selenium:selenium-http-jdk-client:4.8.1'
+
     // Use JUnit Jupiter API for testing.
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.2'
 
