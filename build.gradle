@@ -15,7 +15,7 @@ repositories {
 
 dependencies {
     // Selenium-java 4
-    testImplementation 'org.seleniumhq.selenium:selenium-java:4.13.0'
+    testImplementation 'org.seleniumhq.selenium:selenium-java:4.14.0'
 
     // Selenium-java 4 jdk client
     testImplementation 'org.seleniumhq.selenium:selenium-http-jdk-client:4.13.0'
