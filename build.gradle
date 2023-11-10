@@ -15,13 +15,11 @@ repositories {
 
 dependencies {
     // Selenium-java 4
-    testImplementation 'org.seleniumhq.selenium:selenium-java:4.15.0'
+    testImplementation('org.seleniumhq.selenium:selenium-java:4.15.0')
 
-    // Use JUnit Jupiter API for testing.
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.1'
-
-    // Use JUnit Jupiter Engine for testing.
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.1'
+    // Use JUnit Jupiter for testing.
+    testImplementation('org.junit.jupiter:junit-jupiter:5.10.1')
+    testRuntimeOnly('org.junit.platform:junit-platform-launcher')
 }
 
 compileJava {
