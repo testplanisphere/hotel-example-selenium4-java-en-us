@@ -21,6 +21,6 @@ jobs:
         distribution: 'temurin'
         java-version: 17
     - name: Setup and execute Gradle 'test' task
-      uses: gradle/gradle-build-action@v2
+      uses: gradle/gradle-build-action@v3
       with:
         arguments: test
