@@ -16,7 +16,6 @@ public class Utils {
   }
 
   public static WebDriver createWebDriver() {
-    System.setProperty("webdriver.http.factory", "jdk-http-client");
     var githubActions = Boolean.parseBoolean(System.getenv("GITHUB_ACTIONS"));
     var options = new ChromeOptions();
     if (githubActions) {
