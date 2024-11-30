@@ -1,6 +1,6 @@
 # hotel-example-selenium4-java-en-us
 
-[![selenium4-java-en-us](https://github.com/testplanisphere/hotel-example-selenium4-java-en-us/actions/workflows/test.yml/badge.svg)](https://github.com/testplanisphere/hotel-example-selenium4-java-en-us/actions/workflows/test.yml)
+[![selenium4-java-en-us](https://github.com/takeyaqa/hotel-example-selenium4-java-en-us/actions/workflows/test.yml/badge.svg)](https://github.com/takeyaqa/hotel-example-selenium4-java-en-us/actions/workflows/test.yml)
 
 This project is example codes for learning test automation.
 
