@@ -14,10 +14,3 @@ updates:
     commit-message:
       prefix: "ci"
       include: "scope"
-  - package-ecosystem: "devcontainers"
-    directory: "/"
-    schedule:
-      interval: "daily"
-    commit-message:
-      prefix: "chore"
-      include: "scope"
