@@ -14,7 +14,6 @@ jobs:
       matrix:
         base-url: ["https://hotel-example-site.takeyaqa.dev/en-US", "https://hotel.testplanisphere.dev/en-US"]
     runs-on: ubuntu-latest
-    continue-on-error: true
     steps:
     - uses: actions/checkout@v4
     - name: Set up JDK 21
