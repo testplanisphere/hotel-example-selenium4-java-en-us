@@ -48,7 +48,7 @@ class PlansTest {
 
     assertAll("Plans",
         () -> assertEquals(7, planTitles.size()),
-        () -> assertEquals("Plan with special offers", planTitles.get(0)),
+        () -> assertEquals("Plan with special offers", planTitles.getFirst()),
         () -> assertEquals("Staying without meals", planTitles.get(1)),
         () -> assertEquals("Business trip", planTitles.get(2)),
         () -> assertEquals("With beauty salon", planTitles.get(3)),
@@ -72,7 +72,7 @@ class PlansTest {
 
     assertAll("Plans",
         () -> assertEquals(9, planTitles.size()),
-        () -> assertEquals("Plan with special offers", planTitles.get(0)),
+        () -> assertEquals("Plan with special offers", planTitles.getFirst()),
         () -> assertEquals("With dinner", planTitles.get(1)),
         () -> assertEquals("Economical", planTitles.get(2)),
         () -> assertEquals("Staying without meals", planTitles.get(3)),
@@ -98,7 +98,7 @@ class PlansTest {
 
     assertAll("Plans",
         () -> assertEquals(10, planTitles.size()),
-        () -> assertEquals("Plan with special offers", planTitles.get(0)),
+        () -> assertEquals("Plan with special offers", planTitles.getFirst()),
         () -> assertEquals("Premium plan", planTitles.get(1)),
         () -> assertEquals("With dinner", planTitles.get(2)),
         () -> assertEquals("Economical", planTitles.get(3)),

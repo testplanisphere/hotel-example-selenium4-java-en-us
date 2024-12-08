@@ -24,14 +24,14 @@ public class ReservePage {
     }
   }
 
-  private WebDriver driver;
+  private final WebDriver driver;
 
-  private WebDriverWait wait;
+  private final WebDriverWait wait;
 
   public ReservePage(WebDriver driver) {
     this.driver = driver;
     this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-    if (!this.driver.getTitle().startsWith("Reservation")) {
+    if (this.driver.getTitle() == null || !this.driver.getTitle().startsWith("Reservation")) {
       throw new IllegalStateException("wrong page: " + this.driver.getTitle());
     }
   }
@@ -135,32 +135,32 @@ public class ReservePage {
 
   public String getReserveDate() {
     var dateInput = driver.findElement(By.id("date"));
-    return dateInput.getAttribute("value");
+    return dateInput.getDomProperty("value");
   }
 
   public String getReserveTerm() {
     var termInput = driver.findElement(By.id("term"));
-    return termInput.getAttribute("value");
+    return termInput.getDomProperty("value");
   }
 
   public String getHeadCount() {
     var headCountInput = driver.findElement(By.id("head-count"));
-    return headCountInput.getAttribute("value");
+    return headCountInput.getDomProperty("value");
   }
 
   public String getUsername() {
     var headCountInput = driver.findElement(By.id("username"));
-    return headCountInput.getAttribute("value");
+    return headCountInput.getDomProperty("value");
   }
 
   public String getEmail() {
     var headCountInput = driver.findElement(By.id("email"));
-    return headCountInput.getAttribute("value");
+    return headCountInput.getDomProperty("value");
   }
 
   public String getTel() {
     var headCountInput = driver.findElement(By.id("tel"));
-    return headCountInput.getAttribute("value");
+    return headCountInput.getDomProperty("value");
   }
 
   public String getReserveDateMessage() {

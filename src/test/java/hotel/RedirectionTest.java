@@ -1,6 +1,7 @@
 package hotel;
 
 import static hotel.Utils.BASE_URL;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import hotel.pages.TopPage;
@@ -47,6 +48,7 @@ class RedirectionTest {
   void testMyPageToTop() {
     driver.get(BASE_URL + "/mypage.html");
     wait.until(ExpectedConditions.urlContains("index.html"));
+    assertNotNull(driver.getCurrentUrl());
     assertTrue(driver.getCurrentUrl().endsWith("index.html"));
   }
 
@@ -62,6 +64,7 @@ class RedirectionTest {
 
     driver.get(BASE_URL + "/login.html");
     wait.until(ExpectedConditions.urlContains("index.html"));
+    assertNotNull(driver.getCurrentUrl());
     assertTrue(driver.getCurrentUrl().endsWith("index.html"));
   }
 
@@ -77,6 +80,7 @@ class RedirectionTest {
 
     driver.get(BASE_URL + "/signup.html");
     wait.until(ExpectedConditions.urlContains("index.html"));
+    assertNotNull(driver.getCurrentUrl());
     assertTrue(driver.getCurrentUrl().endsWith("index.html"));
   }
 
@@ -86,6 +90,7 @@ class RedirectionTest {
   void testNoPlanPageToTop() {
     driver.get(BASE_URL + "/reserve.html?plan-id=100");
     wait.until(ExpectedConditions.urlContains("index.html"));
+    assertNotNull(driver.getCurrentUrl());
     assertTrue(driver.getCurrentUrl().endsWith("index.html"));
   }
 
@@ -95,6 +100,7 @@ class RedirectionTest {
   void testInvalidPlanPageToTop() {
     driver.get(BASE_URL + "/reserve.html?plan-id=abc");
     wait.until(ExpectedConditions.urlContains("index.html"));
+    assertNotNull(driver.getCurrentUrl());
     assertTrue(driver.getCurrentUrl().endsWith("index.html"));
   }
 
@@ -104,6 +110,7 @@ class RedirectionTest {
   void testInvalidParamPlanPageToTop() {
     driver.get(BASE_URL + "/reserve.html");
     wait.until(ExpectedConditions.urlContains("index.html"));
+    assertNotNull(driver.getCurrentUrl());
     assertTrue(driver.getCurrentUrl().endsWith("index.html"));
   }
 
@@ -113,6 +120,7 @@ class RedirectionTest {
   void testMemberOnlyPlanPageToTop() {
     driver.get(BASE_URL + "/reserve.html?plan-id=3");
     wait.until(ExpectedConditions.urlContains("index.html"));
+    assertNotNull(driver.getCurrentUrl());
     assertTrue(driver.getCurrentUrl().endsWith("index.html"));
   }
 
@@ -122,6 +130,7 @@ class RedirectionTest {
   void testPremiumOnlyPlanPageToTop() {
     driver.get(BASE_URL + "/reserve.html?plan-id=1");
     wait.until(ExpectedConditions.urlContains("index.html"));
+    assertNotNull(driver.getCurrentUrl());
     assertTrue(driver.getCurrentUrl().endsWith("index.html"));
   }
 
@@ -137,6 +146,7 @@ class RedirectionTest {
 
     driver.get(BASE_URL + "/reserve.html?plan-id=1");
     wait.until(ExpectedConditions.urlContains("index.html"));
+    assertNotNull(driver.getCurrentUrl());
     assertTrue(driver.getCurrentUrl().endsWith("index.html"));
   }
 
@@ -146,6 +156,7 @@ class RedirectionTest {
   void testInvalidParamConfirmPageToTop() {
     driver.get(BASE_URL + "/confirm.html");
     wait.until(ExpectedConditions.urlContains("index.html"));
+    assertNotNull(driver.getCurrentUrl());
     assertTrue(driver.getCurrentUrl().endsWith("index.html"));
   }
 }

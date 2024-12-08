@@ -8,11 +8,11 @@ import org.openqa.selenium.support.Color;
 
 public class IconPage {
 
-  private WebDriver driver;
+  private final WebDriver driver;
 
   public IconPage(WebDriver driver) {
     this.driver = driver;
-    if (!this.driver.getTitle().startsWith("Setting Icon")) {
+    if (this.driver.getTitle() == null || !this.driver.getTitle().startsWith("Setting Icon")) {
       throw new IllegalStateException("wrong page: " + this.driver.getTitle());
     }
   }

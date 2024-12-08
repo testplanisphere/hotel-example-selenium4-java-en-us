@@ -3,6 +3,7 @@ package hotel;
 import static hotel.Utils.BASE_URL;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import hotel.pages.SignupPage.Gender;
@@ -246,6 +247,7 @@ class MyPageTest {
     assertEquals("The process has been completed. Thank you for your service.", alert.getText());
     alert.accept();
     wait.until(ExpectedConditions.urlContains("index.html"));
+    assertNotNull(driver.getCurrentUrl());
     assertTrue(driver.getCurrentUrl().contains("index.html"));
   }
 

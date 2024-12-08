@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class RoomPage {
 
-  private WebDriver driver;
+  private final WebDriver driver;
 
   public RoomPage(WebDriver driver) {
     this.driver = driver;
