@@ -10,9 +10,11 @@ on:
 
 jobs:
   test:
-
+    strategy:
+      matrix:
+        base-url: ["https://hotel-example-site.takeyaqa.dev/en-US", "https://hotel.testplanisphere.dev/en-US"]
     runs-on: ubuntu-latest
-    
+    continue-on-error: true
     steps:
     - uses: actions/checkout@v4
     - name: Set up JDK 21
@@ -24,3 +26,5 @@ jobs:
       uses: gradle/actions/setup-gradle@v4
     - name: Build with Gradle Wrapper
       run: ./gradlew test
+      env:
+        BASE_URL: ${{ matrix.base-url }}

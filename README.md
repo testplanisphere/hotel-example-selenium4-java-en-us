@@ -21,7 +21,7 @@ This project is example codes for learning test automation.
 
 ### System under test
 
-https://hotel.testplanisphere.dev/en-US/
+https://hotel-example-site.takeyaqa.dev/en-US/
 
 ### Overview
 
