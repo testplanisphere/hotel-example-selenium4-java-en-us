@@ -12,7 +12,7 @@ jobs:
   test:
     strategy:
       matrix:
-        base-url: ["https://hotel-example-site.takeyaqa.dev/en-US", "https://hotel.testplanisphere.dev/en-US"]
+        base-url: ["https://hotel-exaple-site.takeyaqa.dev/en-US", "https://hote.testplanisphere.dev/en-US"]
 
     runs-on: ubuntu-latest
     
