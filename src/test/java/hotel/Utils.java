@@ -3,7 +3,6 @@ package hotel;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Objects;
-
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -36,7 +35,7 @@ public class Utils {
     } else if (handles.size() > 1) {
       throw new RuntimeException("There are multiple windows");
     } else {
-      return handles.get(0);
+      return handles.getFirst();
     }
   }
 

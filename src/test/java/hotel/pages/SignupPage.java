@@ -24,11 +24,11 @@ public class SignupPage {
     }
   }
 
-  private WebDriver driver;
+  private final WebDriver driver;
 
   public SignupPage(WebDriver driver) {
     this.driver = driver;
-    if (!this.driver.getTitle().startsWith("Sign up")) {
+    if (this.driver.getTitle() == null || !this.driver.getTitle().startsWith("Sign up")) {
       throw new IllegalStateException("wrong page: " + this.driver.getTitle());
     }
   }

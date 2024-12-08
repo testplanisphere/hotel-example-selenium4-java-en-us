@@ -6,11 +6,11 @@ import org.openqa.selenium.support.Color;
 
 public class MyPage {
 
-  private WebDriver driver;
+  private final WebDriver driver;
 
   public MyPage(WebDriver driver) {
     this.driver = driver;
-    if (!this.driver.getTitle().startsWith("MyPage")) {
+    if (this.driver.getTitle() == null || !this.driver.getTitle().startsWith("MyPage")) {
       throw new IllegalStateException("wrong page: " + this.driver.getTitle());
     }
   }
@@ -79,7 +79,8 @@ public class MyPage {
 
   public int getIconImageWidth() {
     var image = driver.findElement(By.cssSelector("#icon-holder > img"));
-    return Integer.parseInt(image.getAttribute("width"));
+    var width = image.getDomProperty("width");
+    return width != null ? Integer.parseInt(width) : -1;
   }
 
   public Color getIconImageBorder() {

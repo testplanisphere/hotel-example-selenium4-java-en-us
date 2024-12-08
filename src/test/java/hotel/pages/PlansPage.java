@@ -11,14 +11,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class PlansPage {
 
-  private WebDriver driver;
+  private final WebDriver driver;
 
-  private WebDriverWait wait;
+  private final WebDriverWait wait;
 
   public PlansPage(WebDriver driver) {
     this.driver = driver;
     this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-    if (!this.driver.getTitle().startsWith("Plans")) {
+    if (this.driver.getTitle() == null || !this.driver.getTitle().startsWith("Plans")) {
       throw new IllegalStateException("wrong page: " + this.driver.getTitle());
     }
   }

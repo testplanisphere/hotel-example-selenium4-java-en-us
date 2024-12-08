@@ -5,11 +5,11 @@ import org.openqa.selenium.WebDriver;
 
 public class TopPage {
 
-  private WebDriver driver;
+  private final WebDriver driver;
 
   public TopPage(WebDriver driver) {
     this.driver = driver;
-    if (!this.driver.getTitle().equals("HOTEL PLANISPHERE - Website for Practice Test Automation")) {
+    if (this.driver.getTitle() == null || !this.driver.getTitle().equals("HOTEL PLANISPHERE - Website for Practice Test Automation")) {
       throw new IllegalStateException("wrong page: " + this.driver.getTitle());
     }
   }
