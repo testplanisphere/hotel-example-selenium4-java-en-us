@@ -9,6 +9,8 @@
 > [!IMPORTANT]
 > This repository has been migrated to personal ownership. Previously managed under [Test Planisphere](https://github.com/testplanisphere), it is now maintained by [@takeyaqa](https://github.com/takeyaqa).
 >
+> The new repository URL is:
+>
 > [https://github.com/takeyaqa/hotel-example-selenium4-java-en-us](https://github.com/takeyaqa/hotel-example-selenium4-java-en-us)
 >
 > This migration does not affect the content or purpose of the repository. However, if you have cloned or forked this repository, you may need to update your remote URL.
