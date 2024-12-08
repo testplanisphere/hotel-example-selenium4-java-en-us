@@ -3,8 +3,6 @@ plugins {
     id 'java-library'
 }
 
-version = '2021.3.0'
-
 java {
     sourceCompatibility = JavaVersion.VERSION_21
 }
