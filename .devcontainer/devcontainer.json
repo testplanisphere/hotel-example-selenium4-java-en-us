@@ -3,9 +3,7 @@
 {
 	"name": "Java",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"build": {
-		"dockerfile": "Dockerfile"
-	},
+	"image": "mcr.microsoft.com/devcontainers/java:1-21-bullseye",
 
 	"features": {
 		"ghcr.io/devcontainers/features/java:1": {
@@ -13,20 +11,14 @@
 			"installMaven": "false",
 			"installGradle": "false"
 		},
-		"ghcr.io/devcontainers/features/common-utils:2": {},
-		"ghcr.io/devcontainers/features/desktop-lite:1": {}
+		"ghcr.io/devcontainers/features/common-utils:2": {}
 	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [6080],
-	"portsAttributes": {
-		"6080": {
-			"label": "desktop"
-		}
-	},
+	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "java -version",
+	"postCreateCommand": "sudo apt-get update && export DEBIAN_FRONTEND=noninteractive && sudo apt-get install -y chromium",
 
 	// Configure tool-specific properties.
 	"customizations": {
@@ -36,8 +28,10 @@
 				"github.vscode-github-actions"
 			]
 		}
-	}
+	},
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
+
+	"runArgs": ["-e REMOTE_CONTAINERS=true"]
 }
